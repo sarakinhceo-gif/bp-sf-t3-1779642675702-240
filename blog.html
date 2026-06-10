@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <title>강남 셔츠룸 블로그 | 성우이벤트 브로들의 찐후기</title>
+    <meta name="description" content="마포 성우이벤트에서 강남 셔츠룸 최고의 퀄리티를 만나보세요. 브로들이 인정한 리얼 후기, 24시 상담 가능. 지금 바로 전화주세요!">
+    <meta name="keywords" content="강남 셔츠룸, 마포 셔츠룸, 성우이벤트, 셔츠룸 추천, 강남 이벤트, 셔츠룸 후기">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sf-t3-1779642675702-240.vercel.app">
+    <!-- OG 메타 -->
+    <meta property="og:title" content="강남 셔츠룸 | 성우이벤트 | 마포 No.1">
+    <meta property="og:description" content="마포 성우이벤트에서 강남 셔츠룸 최고의 퀄리티를 만나보세요. 브로들이 인정한 리얼 후기, 24시 상담 가능. 지금 바로 전화주세요!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-240.vercel.app/blog">
+    <meta property="og:image" content="https://sf-t3-1779642675702-240.vercel.app/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="성우이벤트">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="강남 셔츠룸 | 성우이벤트 | 마포 No.1">
+    <meta name="twitter:description" content="마포 성우이벤트에서 강남 셔츠룸 최고의 퀄리티를 만나보세요. 브로들이 인정한 리얼 후기, 24시 상담 가능.">
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        /* TYPOGRAPHY */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #ff4444;
+            margin-bottom: 1.5rem;
+            border-left: 6px solid #ff4444;
+            padding-left: 1rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffaa00;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px dashed #ffaa00;
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffaa00;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        p, li {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        a {
+            color: #ff4444;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #ff4444;
+        }
+        /* LAYOUT */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        /* HEADER */
+        header {
+            background: #222;
+            padding: 1rem 0;
+            border-bottom: 4px solid #ff4444;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header > * {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        .logo span {
+            color: #ffaa00;
+        }
+        /* NAV */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li a {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #ff4444;
+            border-bottom-color: #ff4444;
+        }
+        /* 패턴: nav-present, hamburger-menu, responsive-768, tel-link */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                background: #222;
+                padding: 1rem;
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                border-bottom: 4px solid #ff4444;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hamburger {
+                display: block;
+                background: none;
+                border: 2px solid #ff4444;
+                color: #ff4444;
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                text-transform: uppercase;
+            }
+            .hamburger::before {
+                content: "☰";
+            }
+            .hamburger.active::before {
+                content: "✕";
+            }
+        }
+        @media (min-width: 769px) {
+            .hamburger {
+                display: none;
+            }
+            nav ul {
+                display: flex !important;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            background: #ff4444;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .tel-link:hover {
+            background: #cc0000;
+        }
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 4px solid #ffaa00;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            border-left: none;
+            padding-left: 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+        }
+        .hero .tel-link {
+            font-size: 1.4rem;
+            padding: 0.8rem 2.5rem;
+        }
+        /* CARDS */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #2a2a2a;
+            border: 2px solid #444;
+            padding: 1.5rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .card:hover {
+            border-color: #ff4444;
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card p {
+            color: #bbb;
+        }
+        .card .tel-link {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        /* BLOG POST */
+        .blog-post {
+            background: #2a2a2a;
+            border: 2px solid #444;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .blog-post h2 {
+            margin-top: 0;
+        }
+        .blog-post p {
+            line-height: 1.8;
+        }
+        .blog-post .highlight {
+            background: #333;
+            border-left: 4px solid #ffaa00;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #444;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-item h3 {
+            cursor: pointer;
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+        .faq-item p {
+            margin: 0.5rem 0 0;
+            display: none;
+        }
+        .faq-item.active p {
+            display: block;
+        }
+        /* FOOTER */
+        footer {
+            background: #222;
+            border-top: 4px solid #ff4444;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        footer p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffaa00;
+        }
+        /* UTILITY */
+        .text-center {
+            text-align: center;
+        }
+        .mt-2 {
+            margin-top: 2rem;
+        }
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">성우<span>이벤트</span></div>
+            <button class="hamburger" onclick="toggleNav()"></button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="/services">서비스</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+            </nav>
+            <a href="tel:010-1234-5678" class="tel-link">24시 전화상담</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>브로들의 찐 블로그</h1>
+            <p>강남 셔츠룸, 마포 성우이벤트에서 진짜 후기를 전해드립니다. 형님들, 이건 꼭 알아야 해요!</p>
+            <a href="tel:010-1234-5678" class="tel-link">지금 전화하고 혜택받자</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="blog-post">
+            <h2>강남 셔츠룸 vs 마포 셔츠룸, 내 취향은?</h2>
+            <p>야, 형들. 나 원래 강남 셔츠룸만 고집했었거든? 근데 얼마 전에 마포에 있는 성우이벤트를 형이랑 같이 가보게 됐어. 솔직히 처음에는 "강남이 최고지, 뭐" 이랬는데... 완전 내 생각이 짧았어.</p>
+            <p>마포 셔츠룸 분위기가 생각보다 훨씬 더 자유롭고 편한 느낌이더라고. 강남은 뭔가 좀 딱딱한 느낌이라면, 여기는 브로들끼리 술 한잔 걸치면서 편하게 떠들기 딱 좋아. 게다가 성우이벤트라는 시스템이 있어서 이벤트도 다양하고, 분위기 메이킹도 완전 프로페셔널함.</p>
+            <div class="highlight">
+                "형, 여기 괜찮지? 강남보다 낫지?" — 내 형 왈. 맞는 말임.
+            </div>
+            <p>사실 강남 셔츠룸도 좋아. 퀄리티는 확실히 높아. 근데 마포 성우이벤트는 그 퀄리티에 더해서 '편안함'이라는 옵션이 추가된 느낌이야. 비즈니스 자리면 강남, 브로들끼리 진짜 놀러 가는 거면 마포. 이게 내 결론임.</p>
+            <p>그리고 결정적으로 가격도 완전 착해. 강남 가면 기본 테이블에 병 몇 개 시키면 금방 100만원 넘어가잖아? 여기는 같은 퀄리티에 70% 가격이면 충분함. 형들, 나 처럼 낚이지 말고 마포 성우이벤트 한 번 가봐. 후회 안 해.</p>
+            <p>마지막으로 팁 하나 주자면, 마포 셔츠룸 갈 때는 꼭 미리 전화하고 가. 워낙 인기가 많아서 예약 없으면 기다려야 할 수도 있어. 나도 다음엔 미리 전화할 거야. 아, 참고로 전화번호는 010-1234-5678 이니까 참고해라.</p>
+        </section>
+
+        <section class="card-grid">
+            <div class="card">
+                <h3>강남 셔츠룸 찐후기</h3>
+                <p>강남 셔츠룸 퀄리티는 진짜 최고야. 근데 가격이 부담된다면? 마포 성우이벤트에서 같은 퀄리티를 더 저렴하게 즐겨보세요.</p>
+                <a href="tel:010-1234-5678" class="tel-link">전화하고 할인받자</a>
+            </div>
+            <div class="card">
+                <h3>마포 셔츠룸 추천포인트</h3>
+                <p>브로들끼리 편하게 즐기기 좋은 마포 셔츠룸. 성우이벤트가 준비한 특별한 이벤트를 놓치지 마세요.</p>
+                <a href="tel:010-1234-5678" class="tel-link">24시 상담 가능</a>
+            </div>
+            <div class="card">
+                <h3>셔츠룸 초보자를 위한 가이드</h3>
+                <p>처음 가는 셔츠룸, 어떻게 즐겨야 할지 모르겠다면? 성우이벤트가 처음부터 끝까지 친절하게 안내해드립니다.</p>
+                <a href="tel:010-1234-5678" class="tel-link">지금 상담받기</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <div class="faq-item">
+                <h3>강남 셔츠룸과 마포 셔츠룸의 차이는 뭔가요?</h3>
+                <p>강남 셔츠룸은 비즈니스나 격식 있는 자리에 좋고, 마포 성우이벤트는 브로들끼리 편하게 즐기기에 최적화되어 있어요. 퀄리티는 비슷하지만 분위기와 가격에서 차이가 납니다.</p>
+            </div>
+            <div class="faq-item">
+                <h3>성우이벤트는 어떤 시스템인가요?</h3>
+                <p>성우이벤트는 마포 셔츠룸에서 특별히 준비한 이벤트 시스템입니다. 다양한 테마와 프로모션으로 고객님들이 더 즐겁게 놀 수 있도록 도와드려요.</p>
+            </div>
+            <div class="faq-item">
+                <h3>예약 없이 방문해도 되나요?</h3>
+                <p>가능하지만, 주말이나 저녁 시간대에는 대기가 길어질 수 있어요. 미리 전화(010-1234-5678)로 예약하시면 더 편하게 이용하실 수 있습니다.</p>
+            </div>
+            <div class="faq-item
+</body>
+</html>
